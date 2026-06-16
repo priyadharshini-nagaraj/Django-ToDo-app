@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    background: #f4f7fc;
+    min-height: 100vh;
+}
+
+/* Navbar */
+nav{
+    height: 70px;
+    background: #0f766e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.logo h1{
+    color: white;
+    margin: 0;
+    font-size: 40px;
+}
+
+.links{
+    display: flex;
+    gap: 70px;
+}
+
+.links a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.links a:hover{
+    color: #ffd166;
+    transform: translateY(-2px);
+}
+
+/* Page Heading */
+h1{
+    text-align: center;
+    margin-top: 30px;
+    color: #222;
+}
+
+/* Task Cards */
+.task-card{
+    width: 65%;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.task-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.task-card h2{
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.task-card h3{
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+/* Buttons */
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.btn:hover{
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.complete{
+    background: #22c55e;
+}
+
+.restore{
+    background: #3b82f6;
+}
+
+.delete{
+    background: #ef4444;
+}
+
+/* Form */
+form{
+    width: 450px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+form label{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+form input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+form input:focus{
+    border-color: #0f766e;
+    box-shadow: 0 0 5px rgba(15,118,110,0.3);
+}
+
+button{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #0f766e;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background: #115e59;
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+
+    nav{
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .links{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .task-card{
+        width: 90%;
+    }
+
+    form{
+        width: 90%;
+    }
+}

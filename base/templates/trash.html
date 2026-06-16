@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<center>
+    <h1 style="text-align:center; margin-top:20px;">Trash</h1><br>
+
+    {% for i in data %}
+    <div class="task-card">
+        <h2>{{ i.task }}</h2>
+        <h3>{{ i.desc }}</h3>
+
+        <a class="btn restore" href="{% url 'trestore' i.id %}">
+            Restore
+        </a>
+
+        <a class="btn delete" href="{% url 'tdelete' i.id %}">
+            Delete
+        </a>
+    </div>
+    {% empty %}
+    <div class="task-card">
+        <h2>Trash is empty</h2>
+    </div>
+    {% endfor %}
+</center>
+{% endblock %}

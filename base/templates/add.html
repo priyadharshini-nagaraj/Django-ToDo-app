@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+    {% block content %}
+    <center>
+    <h1 style="text-align:center; margin-top:20px;">Add your daily Task here</h1><br>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="">Title:</label>
+            <input type="text" name="title" id=""> <br><br>
+
+            <label for="">Desc:</label>
+            <input type="text" name="desc" id=""> <br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </center>
+    {% endblock %}

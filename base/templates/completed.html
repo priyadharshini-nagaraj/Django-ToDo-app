@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<center>
+<h1 style="text-align:center; margin-top:20px;">Completed Tasks</h1><br>
+
+{% for i in data %}
+<div class="task-card">
+    <h2>{{ i.task }}</h2>
+    <h3>{{ i.desc }}</h3>
+
+    <a class="btn restore" href="{% url 'crestore' i.id %}">Restore</a>
+    <a class="btn delete" href="{% url 'cdelete' i.id %}">Delete</a>
+</div>
+{% empty %}
+<div class="task-card">
+    <h2>No completed tasks yet.</h2>
+</div>
+{% endfor %}
+</center>
+{% endblock %}

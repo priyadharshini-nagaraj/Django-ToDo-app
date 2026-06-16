@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+    {% block content %}
+    <center>
+        <h1 style="text-align:center; margin-top:20px;">All Task</h1><br>
+        {% for i in data %}
+            <div class="task-card">
+                <h2>{{i.task}}</h2>
+                <h3>{{i.desc}}</h3>
+                <a class="btn complete" href="{% url 'hcomplete' i.id %}">Completed</a>
+                <a class="btn delete" href="{% url 'hdelete' i.id %}">Delete</a>
+            </div>
+            {% endfor %}
+    </center>
+
+    {% endblock %}
